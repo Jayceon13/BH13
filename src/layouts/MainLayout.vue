@@ -56,11 +56,6 @@
 
 
 <style>
-@media screen and (max-width: 600px) {
-  #contacts{
-    margin-top: 100px;
-  }
-}
 
 .menu {
   display: flex;

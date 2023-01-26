@@ -6,6 +6,7 @@
     method="post"
   >
     <q-input
+      class="input"
       filled
       v-model="namesur"
       label="Your name *"
@@ -14,6 +15,7 @@
     />
 
     <q-input
+      class="input"
       filled
       v-model="phone"
       label="Phone number *"
@@ -23,6 +25,7 @@
       ]"
     />
     <q-input
+      class="input"
       filled
       v-model="email"
       label="E-mail *"
@@ -32,6 +35,7 @@
     />
 
     <q-input
+      class="input"
       filled
       v-model="request"
       label="Your request *"
@@ -43,8 +47,8 @@
     />
 
     <div>
-      <q-btn label="Submit" type="submit" color="black" id="feedback-form" formaction="/.netlify/functions/send-email"/>
-      <q-btn label="Reset" type="reset" color="black" flat class="q-ml-sm" />
+      <q-btn label="Submit" type="submit" color="rebeccapurple" id="feedback-form" formaction="/.netlify/functions/send-email"/>
+      <q-btn label="Reset" type="reset" color="white" flat class="q-ml-sm" />
     </div>
   </q-form>
   <alert-form :show="showAlert"></alert-form>
@@ -53,13 +57,15 @@
 <style>
 .form{
   padding: 30px;
-  color: white;
-  background: white;
   height: 600px;
 }
 
-q-input{
-  margin-right: 15px;
+.q-field__inner{
+  background: #9A01D0;
+}
+
+.q-field__label{
+  color: white;
 }
 
 </style>

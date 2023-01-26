@@ -43,20 +43,19 @@ p{
   padding-bottom: 20px;
 }
 .request {
-  height: 600px;
+  height: auto;
   text-transform: none;
   text-align: center;
   display: flex;
   width: 100%;
   color: black;
-  justify-content: center;
   align-items: center;
 
 }
 .request_submit {
   padding-bottom: 30px;
   padding-top: 30px;
-  height: 600px;
+  height: auto;
   width: 100%;
   display: flex;
   align-items: center;
@@ -76,7 +75,7 @@ p{
 
 .request_submit-description {
   width: 50%;
-  background: white;
+
   height: 100%;
 }
 @media screen and (max-width: 600px) {
@@ -87,7 +86,7 @@ p{
     width: 70%;
   }
   .request_submit {
-    height: 100vh;
+    height: auto;
   }
 }
 </style>
