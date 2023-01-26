@@ -193,7 +193,6 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  border-radius: none;
 }
 .header-btn img{
   width: 150px;
