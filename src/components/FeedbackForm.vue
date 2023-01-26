@@ -58,6 +58,9 @@
 .form{
   padding: 30px;
   height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .q-field__inner{
