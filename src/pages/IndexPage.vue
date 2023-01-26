@@ -12,7 +12,38 @@
                data-aos="zoom-in"
                data-aos-easing="ease"
                data-aos-delay="800">
-              <img class="logo" src="/img/logoBH.svg">
+            <div class="overflow-hidden">
+              <q-resize-observer @resize="onResize" :debounce="0" />
+
+              <q-splitter
+                id="photos"
+                v-model="splitterModel"
+                separator-class="bg-orange"
+                separator-style="width: 3px"
+                :limits="[0, 100]"
+                :style="splitterStyle"
+                before-class="overflow-hidden"
+                after-class="overflow-hidden"
+              >
+
+                <template v-slot:before>
+                  <img
+                    src="/img/logo2.svg"
+                    :width="width"
+                    class="absolute-top-left"
+                  />
+                </template>
+
+                <template v-slot:after>
+                  <img
+                    src="/img/logo1.svg"
+                    :width="width"
+                    class="absolute-top-right"
+                  />
+                </template>
+
+              </q-splitter>
+            </div>
           </div>
           <div class="main_page-home--name-right">
 
@@ -64,16 +95,53 @@
 <script>
 import {defineComponent} from 'vue'
 import RequestSubmit from "components/RequestSubmit.vue";
+import { ref, computed } from 'vue'
 
 
 export default defineComponent({
-    name: 'IndexPage',
-    components: {RequestSubmit},
+  name: 'IndexPage',
+  components: {RequestSubmit},
+  setup () {
+    const width = ref(400)
+
+    return {
+      width,
+      splitterModel: ref(50), // start at 50%
+
+      splitterStyle: computed(() => ({
+        height: Math.min(600, 0.66 * width.value) + 'px',
+        width: width.value + 'px'
+      })),
+
+      onResize (info) {
+        width.value = info.width
+      }
+    }
+  }
   }
 )
 </script>
 
 <style>
+
+.overflow-hidden{
+  height: 350px;
+}
+@media screen and (max-width: 1030px) {
+  .overflow-hidden{
+    height: 300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .overflow-hidden{
+    height: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .overflow-hidden{
+    height: 150px;
+  }
+}
 .card-1{
   border-radius: 40px;
   margin: 25px;
