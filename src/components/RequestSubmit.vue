@@ -26,7 +26,6 @@
 .video-request{
   width: 50%;
   height: 100%;
-  overflow: hidden;
 }
 .background-request {
   background: black;
@@ -66,6 +65,7 @@ p{
   .request_submit {
     flex-flow: column;
   }
+
 }
 
 @media screen and (min-width: 600px) {
@@ -88,7 +88,6 @@ p{
   }
   .request_submit {
     height: 100vh;
-    margin-top: 200px;
   }
 }
 </style>

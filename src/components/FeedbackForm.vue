@@ -55,7 +55,9 @@
   padding: 30px;
   color: white;
   background: white;
+  height: 600px;
 }
+
 q-input{
   margin-right: 15px;
 }
