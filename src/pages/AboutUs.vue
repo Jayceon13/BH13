@@ -9,17 +9,18 @@
                data-aos-delay="800">
             <img class="logo" src="/img/logo2.svg">
           </div>
-          <div class="main_page-home--name-right">
-            <h1 class="logo-name about-h1"
-                data-aos="zoom-in"
-                data-aos-easing="ease"
-                data-aos-delay="1000">
-              DIGITAL MARKETING AGENCY</h1>
-            <h2 class="logo-name about-h2"
-                data-aos="zoom-in"
-                data-aos-easing="ease"
-                data-aos-delay="1200">
-              INNOVATE YOUR BUSINESS</h2>
+          <div class="developers">
+            <div class="developer-1">
+              <q-avatar size="150px">
+                <img src="/img/developer1.png">
+              </q-avatar>
+              <p>Hello everyone!</p>
+            </div>
+            <div class="developer-2">
+              <q-avatar size="150px">
+                <img src="/img/developer2.png">
+              </q-avatar>
+            </div>
           </div>
         </div>
       </div>
@@ -38,6 +39,42 @@ export default {
 
 
 <style>
+
+.logo {
+  width: 500px
+}
+@media screen and (max-width: 1250px) {
+  .logo {
+    width: 400px
+  }
+}
+@media screen and (max-width: 650px) {
+  .logo {
+    width: 300px
+  }
+}
+@media screen and (max-width: 450px) {
+  .logo {
+    width: 300px
+  }
+}
+
+.developers{
+  display: flex;
+  width: 100%;
+  height: 400px;
+}
+.developer-1{
+  width: 50%;
+  text-align: center;
+}
+.developer-1 p{
+  color: white;
+}
+.developer-2{
+  width: 50%;
+  text-align: center;
+}
 
 
 

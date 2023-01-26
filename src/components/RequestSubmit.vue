@@ -2,9 +2,13 @@
   <div class="request">
     <div class="request_submit">
       <div class="video-request">
-        <video class="background-request" autoplay muted loop playsinline poster="" >
-          <source src="/video/vdo.mp4" type="video/mp4">
-        </video>
+        <q-parallax
+          :height="600"
+          :speed="2"
+          class="parallax"
+          src="/img/duck.webp"
+        >
+        </q-parallax>
       </div>
        <div class="request_submit-description">
          <feedback-form id="request-form"/>
@@ -16,6 +20,9 @@
 
 
 <style scoped>
+.parallax{
+  opacity: 0.3;
+}
 .video-request{
   width: 50%;
   height: 100%;
