@@ -58,7 +58,7 @@
 <style>
 @media screen and (max-width: 600px) {
   #contacts{
-    margin-top: 200px;
+    margin-top: 400px;
   }
 }
 
