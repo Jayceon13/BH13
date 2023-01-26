@@ -2,23 +2,20 @@
   <div class="footer">
   <div class="footer_info">
     <div class="footer-logo">
-    <img class="footer_info-logo" src="/img/logoFooter.png">
-    <div class="lecense" style="color: white">
-      <p>© 2022 by E And A Group FZE<br>
-        Dubai, United Arab Emirates</p>
-    </div>
+    <img class="footer_info-logo" src="/img/logo2.svg">
+
     </div>
     <div class="footer_btn">
       <div class="footer_info-btn-network">
-        <a href="https://instagram.com/ea.mediagroup">
+        <a href="">
           <img class="btn-network btn-network-inst" src="/icons/instagram.svg">
         </a>
-        <a href="https://wa.me/+971585996202">
+        <a href="">
           <img class="btn-network btn-network-wa" src="/icons/whatsapp.svg">
         </a>
       </div>
 
-      <a class="btn-mail" href="mailto: inquiry@eamedia.ae">inquiry@eamedia.ae</a>
+      <a class="btn-mail" href="mailto: inquiry@eamedia.ae"></a>
     </div>
   </div>
   </div>

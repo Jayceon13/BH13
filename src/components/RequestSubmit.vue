@@ -1,11 +1,12 @@
 <template>
   <div class="request">
     <div class="request_submit">
-      <div class="request_submit-logo" >
-        <img src="/img/logoblack.svg">
-        </div>
+      <div class="video-request">
+        <video class="background-request" autoplay muted loop playsinline poster="" >
+          <source src="/video/vdo.mp4" type="video/mp4">
+        </video>
+      </div>
        <div class="request_submit-description">
-        <p>GET IN TOUCH!</p>
          <feedback-form id="request-form"/>
       </div>
     </div>
@@ -15,16 +16,31 @@
 
 
 <style scoped>
+.video-request{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.background-request {
+  background: black;
+  opacity: 0.3;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scale(2);
+}
 p{
   padding-top: 20px;
   padding-bottom: 20px;
 }
 .request {
-  min-height: 100vh;
+  height: 600px;
   text-transform: none;
   text-align: center;
   display: flex;
-  background: #ffffff;
   width: 100%;
   color: black;
   justify-content: center;
@@ -34,8 +50,8 @@ p{
 .request_submit {
   padding-bottom: 30px;
   padding-top: 30px;
-  height: 90%;
-  width: 90%;
+  height: 600px;
+  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -50,15 +66,23 @@ p{
     text-align: start;
   }
 }
-.request_submit-logo {
-  width: 50%;
-}
-.request_submit-logo img{
-  width: 70%;
-}
 
 .request_submit-description {
   width: 50%;
+  background: white;
+  height: 100%;
+}
+@media screen and (max-width: 600px) {
+  .request_submit-description {
+    width: 70%;
+  }
+  .video-request{
+    width: 70%;
+  }
+  .request_submit {
+    height: 100vh;
+    margin-top: 100px;
+  }
 }
 </style>
 

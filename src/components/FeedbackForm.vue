@@ -2,14 +2,13 @@
   <q-form
     @submit="onSubmit"
     @reset="onReset"
-    class="q-gutter-md"
+    class="form"
     method="post"
   >
     <q-input
       filled
       v-model="namesur"
       label="Your name *"
-      hint="Name and surname"
       lazy-rules
       :rules="[ val => val && val.length > 2 || 'Please type something']"
     />
@@ -45,13 +44,21 @@
 
     <div>
       <q-btn label="Submit" type="submit" color="black" id="feedback-form" formaction="/.netlify/functions/send-email"/>
-      <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
+      <q-btn label="Reset" type="reset" color="black" flat class="q-ml-sm" />
     </div>
   </q-form>
   <alert-form :show="showAlert"></alert-form>
 </template>
 
 <style>
+.form{
+  padding: 30px;
+  color: white;
+  background: white;
+}
+q-input{
+  margin-right: 15px;
+}
 
 </style>
 

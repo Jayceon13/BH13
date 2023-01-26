@@ -7,9 +7,9 @@
           <q-toolbar-title>
           </q-toolbar-title>
 
-          <q-btn class=" header-btn header_border-btn"
-                 @click="() => { scrollToRequest() }">
-            Contact Us
+          <q-btn flat class=" header-btn"
+                 @click="$router.push('/')">
+            <img src="/img/logo2.svg">
           </q-btn>
           <div class="header-btn-right">
             <a class="header-btn-network" href="https://wa.me/+971585996202">
@@ -32,7 +32,7 @@
       side="right" bordered>
       <div class="menu">
         <div class="menu_burger">
-          <img class="logo_burger" src="/img/logoBurger.png">
+          <img class="logo_burger" src="/img/logo2.svg">
           <div :class="!rightDrawerOpen? 'hamburger hamburger--elastic': 'hamburger is-active hamburger--elastic'" style="padding-right: 32px">
             <div class="hamburger-box" @click="toggleRightDrawer">
               <div class="hamburger-inner"></div>
@@ -56,6 +56,11 @@
 
 
 <style>
+@media screen and (max-width: 600px) {
+  #contacts{
+    margin-top: 200px;
+  }
+}
 
 .menu {
   display: flex;
@@ -185,15 +190,18 @@
 }
 
 .header-btn {
-  font-size: 14px;
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  border-radius: none;
+}
+.header-btn img{
+  width: 150px;
+  background: none;
 }
 
 @media screen and (max-width: 450px) {
   .header-btn {
-    font-size: 10px;
   }
 }
 
